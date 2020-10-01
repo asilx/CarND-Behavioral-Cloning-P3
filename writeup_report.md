@@ -92,6 +92,7 @@ Here is a visualization of the architecture (note: visualizing the architecture 
 To capture good driving behavior, I first recorded two laps on track one using center lane driving. Here is an example image of center lane driving:
 
 ![At the middle][image2]
+![At the middle][image5]
 
 I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to .... These images show what a recovery looks like starting from ... :
 
@@ -100,7 +101,7 @@ I then recorded the vehicle recovering from the left side and right sides of the
 
 Then I repeated this process on track two in order to get more data points.
 
-To augment the data sat, I also flipped images horizontally toget
+To augment the data sat, I also flipped images horizontally together with multiplying the steering angle with -1.
 
 After the collection process, I had 15000 number of data points. 
 I finally randomly shuffled the data set and put 20% of the data into a validation set.  I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 8 as evidenced during the training. I used an adam optimizer so that manually training the learning rate wasn't necessary.
